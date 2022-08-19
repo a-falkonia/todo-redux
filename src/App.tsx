@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react';
+import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import GlobalStyle from './styles/GlobalStyles';
 import { Todo } from './types.d';
@@ -13,37 +14,7 @@ export const StyledHeader = styled.header`
   font-style: italic;
 `;
 
-const initialTodos: Todo[] = [
-  {
-    description: 'Walk the dog',
-    completed: false,
-  },
-  {
-    description: 'Write app',
-    completed: true,
-  },
-];
-
 function App() {
-  const [todos, setTodos] = useState(initialTodos);
-
-  const handleToggle = (selectedTodo: Todo) => {
-    const newTodos = todos.map((todo) => {
-      if (todo === selectedTodo) {
-        return {
-          ...todo,
-          completed: !todo.completed,
-        };
-      }
-      return todo;
-    });
-    setTodos(newTodos);
-  };
-
-  const handleTodoAdd = (description: string) => {
-    setTodos([...todos, { description: description, completed: false }]);
-  };
-
   return (
     <Fragment>
       <GlobalStyle />
@@ -52,8 +23,8 @@ function App() {
           <h1>Todo App</h1>
         </StyledHeader>
         <main>
-          <TodoList todos={todos} toggleTodo={handleToggle} />
-          <AddTodoForm addTodo={handleTodoAdd} />
+          <TodoList/>
+          <AddTodoForm/>
         </main>
       </div>
     </Fragment>

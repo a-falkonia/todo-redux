@@ -1,14 +1,18 @@
 import { useState, MouseEvent } from 'react';
+import { useDispatch } from 'react-redux';
+import { addTodo } from '../store/todoSlice';
 
-interface Props {
-  addTodo: (description: string) => void;
-}
-
-const AddTodoForm = ({ addTodo }: Props) => {
+const AddTodoForm = () => {
   const [text, setText] = useState('');
+  const dispatch = useDispatch();
   const handleSubmit = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    addTodo(text);
+
+    dispatch(
+      addTodo({
+        description: text,
+      })
+    );
     setText('');
   };
 

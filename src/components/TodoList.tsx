@@ -1,14 +1,18 @@
-import { Todo } from '../types.d'
+import { Todo } from '../types.d';
 import { TodoListItem } from './TodoListItem';
-interface Props {
-  todos: Todo[];
-  toggleTodo: (selectedTodo: Todo) => void;
-}
+import { useSelector } from 'react-redux';
+import { TodoState } from '../redux';
 
-const TodoList = ({todos, toggleTodo}: Props) => {
-    return <ul>
-        {todos.map((todo) => <TodoListItem key={todo.description} todo={todo} toggleTodo={toggleTodo}/>)}
-  </ul>;
+const TodoList = () => {
+  const todos: Todo[] = useSelector((state: TodoState) => state.todos);
+
+  return (
+    <ul>
+      {todos.map((todo) => (
+        <TodoListItem key={todo.id} {...todo} />
+      ))}
+    </ul>
+  );
 };
 
 export default TodoList;
