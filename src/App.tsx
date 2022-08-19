@@ -1,8 +1,7 @@
-import { Fragment, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { Fragment} from 'react';
 import styled from 'styled-components';
 import GlobalStyle from './styles/GlobalStyles';
-import { Todo } from './types.d';
+
 import TodoList from './components/TodoList';
 import AddTodoForm from './components/AddTodoForm';
 

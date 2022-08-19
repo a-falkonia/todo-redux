@@ -1,6 +1,6 @@
 import { useState, MouseEvent } from 'react';
 import { useDispatch } from 'react-redux';
-import { addTodo } from '../store/todoSlice';
+import { addTodo } from '../redux/todoSlice';
 
 const AddTodoForm = () => {
   const [text, setText] = useState('');
