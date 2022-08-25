@@ -18,6 +18,8 @@ const StyledMain = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 18px;
+  font-family: monospace;
 `;
 
 const StyledContainer = styled.div`
