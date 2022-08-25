@@ -19,7 +19,7 @@ Builds the app for production to the `build` folder.
 
 ## Roadmap
 
-- [ ] Add better styling
+- [x] Add better styling
 - [ ] Add Todo filters
 - [ ] Fetch Todos from API
 
