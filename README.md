@@ -22,6 +22,7 @@ Builds the app for production to the `build` folder.
 - [x] Add better styling
 - [ ] Add Todo filters
 - [ ] Fetch Todos from API
+- [ ] Add Dark Mode
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
