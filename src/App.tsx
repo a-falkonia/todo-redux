@@ -4,6 +4,7 @@ import GlobalStyle from './styles/GlobalStyles';
 import { Fragment } from 'react';
 import TodoList from './components/TodoList';
 import AddTodoForm from './components/AddTodoForm';
+import FilterPanel from './components/FilterPanel';
 
 const StyledHeader = styled.header`
   display: flex;
@@ -41,6 +42,7 @@ function App() {
         </StyledHeader>
         <StyledMain>
           <StyledContainer>
+            <FilterPanel />
             <TodoList />
             <AddTodoForm />
           </StyledContainer>

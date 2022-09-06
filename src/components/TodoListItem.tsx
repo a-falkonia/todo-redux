@@ -44,7 +44,7 @@ const StyledButton = styled.button`
   background-color: #fcfcfd;
   border-radius: 4px;
   border-color: #36395a;
-  /* border-width: 0; */
+  border-width: 0;
   box-shadow: rgba(45, 35, 66, 0.2) 0 2px 4px,
     rgba(45, 35, 66, 0.15) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
 
