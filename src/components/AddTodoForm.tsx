@@ -14,6 +14,19 @@ const StyledForm = styled.form`
     font-size: 18px;
     font-family: monospace;
   }
+
+    @media (max-width: 768px) {
+    flex-direction: column;
+
+    input {
+      height: 40px;
+    }
+
+    button {
+      border-radius: 0 0 4px 4px;
+    }
+  }
+
 `;
 const StyledAddTodoButton = styled.button`
   display: inline-flex;
@@ -24,13 +37,13 @@ const StyledAddTodoButton = styled.button`
   height: 40px;
   padding-left: 16px;
   padding-right: 16px;
-  font-size: 18px;
+  font-size: 20px;
   font-family: monospace;
-  color: #36395a;
-  background-color: #ffbdc9;
-  border-radius: 4px;
+  color: white;
+  background-color:  #4c8bf5;
+  border-radius: 0 4px 4px 0;
   border-color: #36395a;
-  /* border-width: 0; */
+  border-width: 0;
 
   transition: box-shadow 0.15s, transform 0.15s;
   user-select: none;

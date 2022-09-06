@@ -8,7 +8,7 @@ const initialState = [
   },
   {
     id: 2,
-    description: 'Write app',
+    description: 'Code the Todo App',
     completed: true,
   },
   {

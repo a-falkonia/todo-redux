@@ -8,11 +8,24 @@ const StyledListItem = styled.li`
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin: 8px;
   padding: 10px;
-  border-bottom: 1px solid #c1c1c1;
+  border: 1px solid #c1c1c1;
+  border-radius: 8px;
+  cursor: pointer;
 
   label {
     width: 100%;
+    font-size: 20px;
+  }
+
+  input {
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    button {
+      display: none;
+    }
   }
 `;
 
