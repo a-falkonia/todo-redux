@@ -2,6 +2,8 @@
 
 A small & simple todo app made for trying out Redux
 
+Live: https://a-falkonia.github.io/todo-redux/
+
 ### Technologies used
 
 - TS, React
