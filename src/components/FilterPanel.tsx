@@ -1,4 +1,7 @@
+import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
+import { setVisibilityFilter } from '../redux/filterSlice';
+import FilterButton from './FilterButton';
 
 const StyledPanel = styled.div`
   display: flex;
@@ -6,35 +9,31 @@ const StyledPanel = styled.div`
   width: 100%;
   padding: 16px 0px;
 `;
-const StyledButton = styled.button`
-  display: inline-flex;
-  flex: 1;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  height: 40px;
-  padding: 0px 16px;
-  font-size: 18px;
-  font-family: monospace;
-  color: #36395a;
-  background-color: white;
-  border-color: #4c8bf5;
-  border-radius: 4px;
-  user-select: none;
-  cursor: pointer;
 
-  :not(:first-child) {
-    margin-left: 8px;
-  }
-`;
+const filters = [
+  { id: 'SHOW_ALL', label: 'Show All' },
+  { id: 'SHOW_COMPLETED', label: 'Show Completed' },
+  { id: 'SHOW_ACTIVE', label: 'Show Active' },
+];
 
 const FilterPanel = () => {
+  const dispatch = useDispatch();
+  const setFilter = (id: string) => {
+    dispatch(
+      setVisibilityFilter({
+        filter: id,
+      })
+    );
+  };
   return (
     <StyledPanel>
-      <StyledButton>Show All</StyledButton>
-      <StyledButton>Show Active</StyledButton>
-      <StyledButton>Show Completed</StyledButton>
+      {filters.map((filter) => (
+        <FilterButton
+          key={filter.id}
+          filter={filter}
+          onFilterClick={setFilter}
+        />
+      ))}
     </StyledPanel>
   );
 };
