@@ -22,7 +22,7 @@ Builds the app for production to the `build` folder.
 ## Roadmap
 
 - [x] Add better styling
-- [ ] Add Todo filters
+- [x] Add Todo filters
 - [ ] Fetch Todos from API
 - [ ] Add Dark Mode
 
